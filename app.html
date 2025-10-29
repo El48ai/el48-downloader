@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EL48 Downloader</title>
+  <style>
+    body{font-family:Arial,sans-serif;text-align:center;margin:0;padding:0;background:linear-gradient(135deg,#e60012,#000);color:#fff}
+    input{width:70%;padding:10px;margin:15px;border:none;border-radius:8px}
+    button{padding:10px 20px;border:none;border-radius:8px;background:#fff;color:#000;font-weight:bold;cursor:pointer}
+    button:hover{background:#e60012;color:#fff}
+    h1{margin-top:40px}
+    footer{margin-top:40px;font-size:13px;color:#ccc}
+  </style>
+</head>
+<body>
+  <h1>EL48 Downloader</h1>
+  <p>Tempel link TikTok / YouTube / X (Twitter) di bawah</p>
+  <input type="url" id="url" placeholder="https://..." />
+  <br>
+  <button onclick="download()">Download</button>
+
+  <script>
+    function download(){
+      const link=document.getElementById("url").value.trim();
+      if(!link){alert("Masukkan link terlebih dahulu");return;}
+      const url=encodeURIComponent(link);
+      if(link.includes("tiktok.com")) window.open(`https://ssstik.io/id?url=${url}`);
+      else if(link.includes("youtube.com")||link.includes("youtu.be")) window.open(`https://en.savefrom.net/1-youtube-video-downloader/?url=${url}`);
+      else if(link.includes("twitter.com")||link.includes("x.com")) window.open(`https://www.expertsphp.com/facebook-video-downloader.php?url=${url}`);
+      else alert("Link tidak dikenali, pastikan dari TikTok, YouTube, atau X.");
+    }
+  </script>
+
+  <footer>© 2025 EL48 AI — Downloader Pintar</footer>
+</body>
+</html>
